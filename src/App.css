@@ -1,6 +1,37 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2em;
   text-align: center;
 }
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .25em;
+}
+
+button {
+  text-decoration: none;
+  font-size: 1em;
+  background-color: var(--btn-color-primary);
+  color: var(--color-primary-light);
+  padding-inline: 3rem;
+  padding-block: 1em;
+  border: none;
+  border-radius: 1em;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: .9;
+}
+
+button:active {
+  opacity: .75;
+}
+
+.router-link-button {
+  margin-top: 1.5em;
+}
+
