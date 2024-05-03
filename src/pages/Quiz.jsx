@@ -6,7 +6,7 @@ export default function Quiz() {
     <main className="page-wrapper">
       <h1>This is the quiz page~!</h1>
       <Link to="/review" className="router-link-button">
-        <button>Check answers</button>
+        Check answers
       </Link>
     </main>
   );

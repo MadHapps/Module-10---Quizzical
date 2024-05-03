@@ -11,7 +11,9 @@
   gap: .25em;
 }
 
-button {
+a {
+  width:fit-content;
+  place-self: center;
   text-decoration: none;
   font-size: 1em;
   background-color: var(--btn-color-primary);
@@ -22,12 +24,12 @@ button {
   border-radius: 1em;
 }
 
-button:hover {
+a:hover {
   cursor: pointer;
   opacity: .9;
 }
 
-button:active {
+a:active {
   opacity: .75;
 }
 

@@ -9,7 +9,7 @@ export default function Front() {
         Can you correctly answer 5 random questions?
       </h2>
       <Link to="/quiz" className="router-link-button">
-        <button>Start quiz</button>
+        Start quiz
       </Link>
     </main>
   );
