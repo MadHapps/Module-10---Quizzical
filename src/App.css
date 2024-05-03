@@ -19,7 +19,7 @@ a {
   background-color: var(--btn-color-primary);
   color: var(--color-primary-light);
   padding-inline: 3rem;
-  padding-block: 1em;
+  padding-block: .75em;
   border: none;
   border-radius: 1em;
 }
