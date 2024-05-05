@@ -8,18 +8,19 @@
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  gap: .25em;
+  gap: .5em;
 }
 
 a {
+  min-width: 12em;
   width:fit-content;
   place-self: center;
   text-decoration: none;
   font-size: 1em;
   background-color: var(--btn-color-primary);
   color: var(--color-primary-light);
-  padding-inline: 3rem;
-  padding-block: .75em;
+  padding-inline: 2.5rem;
+  padding-block: 1.15em;
   border: none;
   border-radius: 1em;
 }
