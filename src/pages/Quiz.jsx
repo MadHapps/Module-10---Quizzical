@@ -16,7 +16,7 @@ export default function Quiz() {
   const [questions, setQuestions] = useState(null)
       
   !questions &&
-  fetch(`https://opentdb.com/api.php?amount=5&encode=url3986&token=${sessionId}`)
+  fetch(`https://opentdb.com/api.php?amount=5&difficulty=easy&encode=url3986&token=${sessionId}`)
     .then((res) => res.json())
     .then((data) => setQuestions(data.results));
 
