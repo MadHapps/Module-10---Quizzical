@@ -5,8 +5,10 @@ export default function Question({ data }) {
   const { correct_answer, incorrect_answers, question } = data;
   const answerList = [correct_answer, ...incorrect_answers];
 
-  const decodedAnswerList = answerList.map(answer => decodeURIComponent(answer))
-  const decodedQuestion = decodeURIComponent(question)
+  const decodedAnswerList = answerList.map((answer) =>
+    decodeURIComponent(answer)
+  );
+  const decodedQuestion = decodeURIComponent(question);
 
   console.log(correct_answer);
 
@@ -16,8 +18,8 @@ export default function Question({ data }) {
       <ul className="question-list">
         {decodedAnswerList ? (
           decodedAnswerList.map((answer, index) => (
-            <li key={index} className="question-list-item">
-              {answer}
+            <li key={index}>
+              <button className="question-list-item">{answer}</button>
             </li>
           ))
         ) : (
