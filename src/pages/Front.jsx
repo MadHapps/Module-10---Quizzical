@@ -1,7 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
+import { useEffect } from "react";
 import "./Front.css";
 import { Link } from "react-router-dom";
 
-export default function Front() {
+export default function Front({ setQuestions }) {
+  useEffect(() => {
+    setQuestions(null);
+  }, []);
+
   return (
     <main className="page-wrapper">
       <h1 className="front-title">Quizzical</h1>
