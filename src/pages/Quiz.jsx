@@ -55,7 +55,7 @@ export default function Quiz({
         ))}
       <Link
         to={areQuestionsAnswered ? "/review" : "#"}
-        className={`review-button ${!areQuestionsAnswered && "greyed-out"}`}
+        className={`button-margin ${!areQuestionsAnswered && "greyed-out"}`}
       >
         Check answers
       </Link>

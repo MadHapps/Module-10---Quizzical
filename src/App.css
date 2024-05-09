@@ -37,3 +37,7 @@ a:active,
 button:active {
   opacity: .75;
 }
+
+.button-margin {
+  margin-top: 1.5em;
+}

@@ -15,7 +15,7 @@ export default function Front({ generateNewQuestions }) {
       <h2 className="front-description">
         Can you correctly answer 5 random questions?
       </h2>
-      <Link to="/quiz" className="router-link-button">
+      <Link to="/quiz" className="button-margin">
         Start quiz
       </Link>
     </main>
