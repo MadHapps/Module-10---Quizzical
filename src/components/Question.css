@@ -38,7 +38,7 @@
     border: none;
     box-shadow: var(--btn-color-primary) 0 0 1px 1px ;
     padding-block: .4em;
-    padding-inline: 1em;
+    padding-inline: 1.75em;
     border-radius: .75em;
     background-color: transparent;
 }
@@ -46,4 +46,20 @@
 .question-list-item:hover {
     cursor: pointer;
     opacity: .75;
+}
+
+.selected {
+    background-color: var(--btn-color-secondary);
+    box-shadow: none;
+}
+
+.correct {
+    background-color: var(--correct-answer-bg);
+    box-shadow: none;
+}
+
+.incorrect {
+    background-color: var(--incorrect-answer-bg);
+    opacity: .5;
+    box-shadow: none;
 }

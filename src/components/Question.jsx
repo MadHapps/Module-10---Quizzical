@@ -1,25 +1,25 @@
 /* eslint-disable react/prop-types */
 import "./Question.css";
 
-export default function Question({ data }) {
-  const { correct_answer, incorrect_answers, question } = data;
-  const answerList = [correct_answer, ...incorrect_answers];
-
-  const decodedAnswerList = answerList.map((answer) =>
-    decodeURIComponent(answer)
-  );
-  const decodedQuestion = decodeURIComponent(question);
-
-  console.log(correct_answer);
+export default function Question({ data, allAnswers, onClick }) {
+  const { correct_answer, question, selected, id } = data;
 
   return (
     <section className="question-wrapper">
-      <h1>{decodedQuestion}</h1>
+      <h1>{question}</h1>
       <ul className="question-list">
-        {decodedAnswerList ? (
-          decodedAnswerList.map((answer, index) => (
+        {allAnswers ? (
+          allAnswers.map((answer, index) => (
             <li key={index}>
-              <button className="question-list-item">{answer}</button>
+              <button
+                id={id + index}
+                onClick={() => onClick(id, answer, correct_answer, allAnswers)}
+                className={`question-list-item ${
+                  answer === selected ? "selected" : ""
+                }`}
+              >
+                {answer}
+              </button>
             </li>
           ))
         ) : (
