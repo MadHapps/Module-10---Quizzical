@@ -2,19 +2,17 @@
 import "./Quiz.css";
 import { Link } from "react-router-dom";
 import Question from "../components/Question";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Quiz({
   questions,
   setQuestions,
   generateNewQuestions,
+  areQuestionsAnswered,
+  setAreQuestionsAnswered,
 }) {
-
-  const [areQuestionsAnswered, setAreQuestionsAnswered] = useState(false)
-
-  
   !questions && generateNewQuestions();
-  
+
   function handleSelection(id, selection, answer) {
     setQuestions((prevQuestions) => {
       return prevQuestions.map((question) => {
@@ -31,10 +29,13 @@ export default function Quiz({
       });
     });
   }
-  
+
   useEffect(() => {
     sessionStorage.setItem("questions", JSON.stringify(questions));
-    setAreQuestionsAnswered(questions.length === questions.filter(question => question.isSelected).length)
+    setAreQuestionsAnswered(
+      questions.length ===
+        questions.filter((question) => question.isSelected).length
+    );
   }, [questions]);
 
   return (

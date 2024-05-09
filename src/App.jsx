@@ -10,6 +10,7 @@ function App() {
   const [questions, setQuestions] = useState(
     JSON.parse(sessionStorage.getItem("questions")) || null
   );
+  const [areQuestionsAnswered, setAreQuestionsAnswered] = useState(false);
 
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -68,10 +69,20 @@ function App() {
               questions={questions}
               setQuestions={setQuestions}
               generateNewQuestions={generateNewQuestions}
+              areQuestionsAnswered={areQuestionsAnswered}
+              setAreQuestionsAnswered={setAreQuestionsAnswered}
             />
           }
         />
-        <Route path="/review" element={<Review questions={questions} />} />
+        <Route
+          path="/review"
+          element={
+            <Review
+              questions={questions}
+              areQuestionsAnswered={areQuestionsAnswered}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
