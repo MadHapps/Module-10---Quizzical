@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import "./Front.css";
 import { Link } from "react-router-dom";
 
-export default function Front({ setQuestions }) {
+export default function Front({ generateNewQuestions }) {
   useEffect(() => {
-    setQuestions(null);
+    generateNewQuestions()
   }, []);
 
   return (

@@ -1,0 +1,11 @@
+.review-button {
+    margin-top: 1.5em;
+}
+
+.greyed-out {
+    background-color: var(--color-accent)
+}
+
+.greyed-out:hover {
+    cursor: not-allowed;
+}

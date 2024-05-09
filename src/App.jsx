@@ -42,7 +42,7 @@ function App() {
               allAnswers: allAnswers,
               question: decodeURIComponent(question.question),
               id: nanoid(),
-              selected: false,
+              isSelected: false,
             };
           });
         })

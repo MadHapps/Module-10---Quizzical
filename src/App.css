@@ -37,8 +37,3 @@ a:active,
 button:active {
   opacity: .75;
 }
-
-.router-link-button {
-  margin-top: 1.5em;
-}
-
